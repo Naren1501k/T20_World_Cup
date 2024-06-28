@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T20_wc_2024</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       #footer-ball {
     width: 50px;
@@ -29,10 +30,12 @@
     }
 }
 
+
     </style>
-  </head>
-  <body>
     
+    
+</head>
+<body onload="getdata()">
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark" >
         <div class="container-fluid" >
           <a class="navbar-brand" href="./home.html"></a>
@@ -55,6 +58,10 @@
             <li class="nav-item">
               <a class="nav-link" href="Posts.html">Posts</a>
             </li>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
               
              
             </ul>
@@ -62,152 +69,67 @@
           </div>
         </div>
       </nav>
-    
-      <div class="container" style="margin-top: 5em;">
-        <div class="row" >
-            <div class="col-md-12 col-lg-6 col-xl-12" >
-                <div class="grid-item">
-                  <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://img.jagranjosh.com/images/2024/April/3042024/india-twenty-squad.jpg" class="d-block w-100" alt="india">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w960/f_auto/primary/lpiwvu6q2dxg9z8rxsk6" class="d-block w-100" alt="aus">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://crickettimes.com/wp-content/uploads/2023/09/Pakistan-name-ODI-World-Cup-2023-squad.webp" class="d-block w-100" alt="SA">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://static.cricketaddictor.com/images/2024/SouthAfricaTeam.webp?q=80" class="d-block w-100" alt="WI">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://images.deccanherald.com/deccanherald/2024-05/1c76001c-f346-4363-ab2c-6d98456488d8/2024newsmlRC2KB7AWVAFD1044720520.jpeg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" class="d-block w-100" alt="USA">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-3">
-                <div class="grid-item">
-                  <div class="card" style="width: 18rem;">
-                    <img src="https://static.tnn.in/thumb/msid-111147263,thumbsize-36964,width-1280,height-720,resizemode-75/111147263.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">ENG VS SA</h5>
-                      <p class="card-text"> worldcup 2024 super8 today at 8 pm live from US </p>
-                      
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-3">
-                <div class="grid-item">
-                  <div class="card" style="width: 18rem;">
-                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_960,q_50/lsci/db/PICTURES/CMS/362000/362062.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">USA VS WI</h5>
-                      <p class="card-text"> worldcup 2024 super8 TMW at 8 pm 
 
-                      </p>
-                      
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-3">
-                <div class="grid-item">
-                  <div class="card" style="width: 18rem;">
-                    <img src="https://www.mykhel.com/img/2022/12/rohit-litton-india-bangladesh-1670317752-1670595302.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">IND vs BAN</h5>
-                      <p class="card-text">worldcup 2024 super8 on june 23 at 8pm</p>
-                     
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-3">
-              <div class="grid-item">
-                <div class="card" style="width: 18rem;">
-                  <img src="https://c.ndtvimg.com/2023-11/p6uht7v8_maxwell_625x300_07_November_23.jpg?im=FaceCrop,algorithm=dnn,width=806,height=605" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">AUF VS AUS</h5>
-                    <p class="card-text">worldcup 2024 super8 tomorrow on june 23 at 8 pm</p>
-                    
-                  </div>
-                </div>
-              </div>
-          </div>
-          <div class="col-md-12 col-lg-6 col-xl-3">
-            <div class="grid-item">
-              <div class="card" style="width: 18rem;">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoUZkU0rfDlyu0VtWIupyWw5VYZIh-WPBBbQ&s" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">USA VS ENG</h5>
-                  <p class="card-text">worldcup 2024 super8 tomorrow on june 24 </p>
-                  
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="col-md-12 col-lg-6 col-xl-3">
-          <div class="grid-item">
-            <div class="card" style="width: 18rem;">
-              <img src="https://c.ndtvimg.com/2023-03/foj3bj2_sa-vs-wi-afp_625x300_27_March_23.jpg?im=FaceCrop,algorithm=dnn,width=806,height=605" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">WI VS SA</h5>
-                <p class="card-text">worldcup 2024 super8 tomorrow on june 25</p>
+      <div> 
+        <h1>Posts</h1> 
+        <button id="updateDataBtn">Update Data</button>
+         <table id="postsTable" style="padding: 2em;">
+         <thead> 
+        <tr> 
+            <th>Name</th> 
+            <th>Title</th>
+             <th>Body</th>
+             </tr> 
+            </thead>
+             <tbody> 
                
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="col-md-12 col-lg-6 col-xl-3">
-        <div class="grid-item">
-          <div class="card" style="width: 18rem;">
-            <img src="https://c.ndtvimg.com/2023-09/sj2ob33g_india-afp_625x300_24_September_23.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">IND VS AUS</h5>
-              <p class="card-text">worldcup 2024 super8 tomorrow on june 26</p>
-              
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="col-md-12 col-lg-6 col-xl-3">
-      <div class="grid-item">
-        <div class="card" style="width: 18rem;">
-          <img src="https://static.toiimg.com/photo/msid-101801996/101801996.jpg?pl=71628" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">AUG VS BAn</h5>
-            <p class="card-text">worldcup 2024 super8 tomorrow on june 27</p>
-           
-        </div>
-      </div>
-  </div>
-            <!-- Add more items as needed -->
-        </div>
-    </div>
-   
-    </div>
-  </div>
-  <footer class="bg-light text-center py-5 mt-5">
-    <img src="https://www.sportswing.in/wp-content/uploads/2020/10/Flash-i30-Synthetic-Cricket-Ball-p1.jpg" alt="Cricket Ball" id="footer-ball" width= 100>
-    <p>&copy; 2024 T20 World Cup</p>
-    <p><p style="color: #000000;">For More Info </p>
-      <a href="home.html" style="color: darkred;"> Home</a>
-            <a href="teams.html" style="color: brown;"> Matches</a>
-            <a href="contact.html"style="color: darkred;"> contact</a>
-    </p>
-</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+             </tbody>
+             </table> 
+            </div> 
+            <footer class="bg-light text-center py-5 mt-5">
+                <img src="https://www.sportswing.in/wp-content/uploads/2020/10/Flash-i30-Synthetic-Cricket-Ball-p1.jpg" alt="Cricket Ball" id="footer-ball" width= 100>
+                <p>&copy; 2024 T20 World Cup</p>
+                <p><p style="color: #000000;">For More Info </p>
+                  <a href="home.html" style="color: darkred;"> Home</a>
+                        <a href="teams.html" style="color: brown;"> Matches</a>
+                        <a href="contact.html"style="color: darkred;"> contact</a>
+                </p>
+            </footer>
+
+</body>
 </html>
+<script>
+class Post { 
+    constructor(userId, title, body) { this.name = Post.getNameById(userId);
+     this.title = title; this.body = body; }
+      static getNameById(userId)
+       { const names = { 1: 'Athota Srilatha', 2: 'Bandaru Sampath Kumar', 3: 'Gollakaram Ganga Bhavani', 4: 'Gowtham Meka', 5: 'Mayuraj Ranawat', 6: 'Narendiran K', 7: 'Pratham Madhunapanthula', 8: 'Riya Reddy', 9: 'Shaik Sameer', 10: 'Suriyan K', 11: 'Vaishnavi Panta', 12: 'Yateesh Tangudu', }; 
+       return names[userId]; } } 
+
+       document.addEventListener('DOMContentLoaded', () => 
+       { const postsTableBody = document.getElementById('postsTable').querySelector('tbody'); 
+       const updateDataBtn = document.getElementById('updateDataBtn'); 
+       async function fetchPosts() { try { const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+       const data = await response.json(); 
+       console.log(data); 
+      postsTableBody.innerHTML = ''; 
+      data.forEach(postData => 
+      { const post = new Post(postData.userId, postData.title, postData.body);
+       const row = document.createElement('tr');
+       const userId = document.createElement('td');
+        userId.textContent = postData.userId; 
+        const nameCell = document.createElement('td'); 
+        nameCell.textContent = post.name; 
+        const titleCell = document.createElement('td'); 
+        titleCell.textContent = post.title; 
+        const bodyCell = document.createElement('td');
+         bodyCell.textContent = post.body; row.appendChild(userId); 
+         row.appendChild(nameCell); row.appendChild(titleCell);
+          row.appendChild(bodyCell); postsTableBody.appendChild(row); 
+          }); } 
+          catch (error) { console.error('Error fetching posts:', error); 
+
+          } } 
+          fetchPosts(); 
+          updateDataBtn.addEventListener('click', fetchPosts); }); 
+</script>
