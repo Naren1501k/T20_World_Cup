@@ -1,27 +1,27 @@
 module Examplemethods
 
- def CalculatePrice(i, c, w, v)
+ def CalculatePrice(price, height, weight, volume)
    x = 24
  
-   totalvolume = TotalVolume(v,i)
+   totalvolume = TotalVolume(volume,price)
 
-   totalweight = TotalWeight(w,i)
+   totalweight = TotalWeight(w,price)
 
-   totalvolume = TotalVolume(c,i)
+   totalHeight = TotalHeigth(height,price)
 
    print_enter_a_amount_ten_timescalculate_total_value_and_return_in_10_different_strings (totalvolume,totalweight, totalvolume)
   end
 
-  def TotalVolume(v,i)
-    return v*i
+  def TotalVolume(volume,price)
+    return volume*price
   end
 
-  def TotalWeight(w,i)
-    return w*i
+  def TotalWeight(w,price)
+    return weight*price
   end
 
-  def TotalVolume(v,i, z = nil)
-   return v*i
+  def TotalHeight(height , price , z = nil)
+   return height*price
   end
 
   def print_enter_a_amount_ten_times (1..10).to_a.each do |i|
@@ -29,18 +29,19 @@ module Examplemethods
   end
 end
 
-  def calculate_total_value_and_return_in_10_different_strings(total, total1, total2)
+  def calculate_total_value_and_return_in_10_different_strings(totalVolume, totalWeight , totalHeight)
 
-    tempval = total + total1
+    temporary_value = totalVolume + totalWeight
 
-    tempval = tempval + total2
+    temporary_value = temporary_value + totalHeight
 
-    tempval = tempval * tempval (1..10).to_a.each do |i|
+    temporary_value = temporary_value * temporary_value
 
+    (1..10).to_a.each do |i|
     puts 'Result should be below value'
 
-    puts tempval
-    
+    puts ttemporary_value
+
     puts 'Finalised'
     end
   end

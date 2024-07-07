@@ -1,17 +1,17 @@
 require 'csv'
 
 def process_csv(file_path)
-  players = []
-  
-  begin
-    CSV.foreach(file_path, headers: true) do |row|
-      player_name = row['Player name']
-      runs_scored = row['Runs scored'].to_i
-      balls_faced = row['Balls faced'].to_i
-      fours = row['Number of fours'].to_i
-      sixes = row['Number of sixes'].to_i
-      
+    players = []
     
+    begin
+      CSV.foreach(file_path, headers: true) do |row|
+        player_name = row['Player name']
+        runs_scored = row['Runs scored'].to_i
+        balls_faced = row['Balls faced'].to_i
+        fours = row['number of fours'].to_i
+        sixes = row['number of sixes'].to_i
+        
+        
       if player_name.empty? || runs_scored < 0 || balls_faced < 0 || fours < 0 || sixes < 0
         raise "Invalid data in CSV file"
       end
@@ -48,35 +48,36 @@ def print_statistics(players)
   
  
   players.each do |player|
-    puts "Strike rate of #{player[:name]} is #{player[:strike_rate].round(2)}"
+    puts "Strike rate of #{player[:name]} is : #{player[:strike_rate].round(2)}"
+    puts " "
   end
   
  #highest_strike_rate_player = hsep
    hsep = players.max_by { |player| player[:strike_rate] }
-  puts "Player with highest strike rate is #{hsep[:name]} with #{hsep[:strike_rate].round(2)}"
+  puts "Player with highest strike rate is #{hsep[:name]} with - #{hsep[:strike_rate].round(2)}"
+  puts " "
   
   #total_runs_scored = trs
   
   trs = players.map { |player| player[:runs] }.sum
   puts "Total runs scored by all players is #{trs}"
+  puts " "
   
   # total_balls_faced = tbf
   tbf= players.map { |player| player[:balls] }.sum
   puts "Total balls faced by all players is #{tbf}"
+  puts ""
   
  
   most_fours = players.max_by { |player| player[:fours] }
   puts "Player with most fours is #{most_fours[:name]} with #{most_fours[:fours]} fours"
+  puts ""
   
  
   most_sixes = players.max_by { |player| player[:sixes] }
   puts "Player with most sixes is #{most_sixes[:name]} with #{most_sixes[:sixes]} sixes"
+  puts ""
 end
-
-file_path = 'stats.csv'
-players = process_csv(file_path)
-print_statistics(players)
-
-
-
-
+  file_path = 'stats.csv'
+  players = process_csv(file_path)
+  print_statistics(players)

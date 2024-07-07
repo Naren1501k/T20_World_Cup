@@ -1,4 +1,4 @@
-def sort_hash_keys_by_length(hash)
+def sort_length(hash)
     sorted_keys = hash.keys.sort_by { |key| key.length }
     sorted_hash = {}
   
