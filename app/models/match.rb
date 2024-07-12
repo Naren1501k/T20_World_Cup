@@ -1,8 +1,7 @@
 class Match < ApplicationRecord
     belongs_to :players
     belongs_to :teams
-
-    require 'csv'
+require 'csv'
 
 def process_csv(file_path)
     matches = []
@@ -14,37 +13,24 @@ def process_csv(file_path)
         team1_id = row['team1_id'].to_i
         team2_id = row['team2_id'].to_i
         score_team1 = row['score_team1'].to_i
-        score_team1 = row['score_team1'].to_i
-        score_team1 = row['score_team1'].to_i
-        
-        
-      if date.empty? || location.empty? || balls_faced < 0 || fours < 0 || sixes < 0
-        raise "Invalid data in CSV file"
-      end
-      
-      
-      strike_rate = (runs_scored.to_f / balls_faced) * 100
+        score_team2 = row['score_team2'].to_i
+     
       
      
-      player = {
-        name: player_name,
-        runs: runs_scored,
-        balls: balls_faced,
-        fours: fours,
-        sixes: sixes,
-        strike_rate: strike_rate
+      match = {
+        date: date,
+        location: location,
+        team1_id: team1_id,
+        team2_id: team2_id,
+        score_team1: score_team1,
+        score_team2: score_team2
       }
       
-      players << player
+      matches << match
     end
-  rescue StandardError => e
-    puts "Error processing CSV file: #{e.message}"
-    return nil
-  end
-  
-  players
+  matches
 end
 end
 file_path = 'matches.csv'
-players = process_csv(file_path)
-print_statistics(players)
+matches = process_csv(file_path)
+print_statistics(matches)
